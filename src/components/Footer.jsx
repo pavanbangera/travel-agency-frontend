@@ -23,9 +23,7 @@ const Footer = () => {
                         <h4 className="text-lg font-serif mb-6">Company</h4>
                         <ul className="space-y-4 text-sm text-slate-400">
                             <li><Link to="/about" className="hover:text-amber-500 transition-colors">About Us</Link></li>
-                            <li><a href="#" className="hover:text-amber-500 transition-colors">Careers</a></li>
-                            <li><a href="#" className="hover:text-amber-500 transition-colors">Press</a></li>
-                            <li><a href="#" className="hover:text-amber-500 transition-colors">Blog</a></li>
+
                         </ul>
                     </div>
 
@@ -33,9 +31,7 @@ const Footer = () => {
                         <h4 className="text-lg font-serif mb-6">Support</h4>
                         <ul className="space-y-4 text-sm text-slate-400">
                             <li><Link to="/contact" className="hover:text-amber-500 transition-colors">Contact Center</Link></li>
-                            <li><a href="#" className="hover:text-amber-500 transition-colors">Safety Information</a></li>
-                            <li><a href="#" className="hover:text-amber-500 transition-colors">Cancellation Policy</a></li>
-                            <li><a href="#" className="hover:text-amber-500 transition-colors">Privacy Policy</a></li>
+
                         </ul>
                     </div>
 
@@ -51,11 +47,7 @@ const Footer = () => {
 
                 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
                     <p>&copy; 2023 LuxeTravel Agency. All rights reserved.</p>
-                    <div className="flex gap-6 mt-4 md:mt-0">
-                        <a href="#" className="hover:text-white transition-colors">Terms</a>
-                        <a href="#" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-white transition-colors">Cookies</a>
-                    </div>
+
                 </div>
             </div>
         </footer>
