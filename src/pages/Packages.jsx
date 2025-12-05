@@ -54,22 +54,23 @@ const Packages = () => {
                             Find your next adventure among our carefully curated travel packages.
                         </p>
 
-                        <div className="max-w-md mx-auto relative">
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                document.activeElement.blur();
+                            }}
+                            className="max-w-md mx-auto relative"
+                        >
                             <input
                                 type="text"
                                 placeholder="Search destinations..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                onKeyDown={(e) => {
-                                    if (e.key === 'Enter') {
-                                        e.preventDefault();
-                                        e.target.blur();
-                                    }
-                                }}
+                                enterKeyHint="search"
                                 className="w-full pl-12 pr-4 py-3 rounded-full border border-slate-200 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent shadow-sm"
                             />
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
-                        </div>
+                        </form>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
