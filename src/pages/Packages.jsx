@@ -60,7 +60,12 @@ const Packages = () => {
                                 placeholder="Search destinations..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                onKeyDown={(e) => e.key === 'Enter' && e.target.blur()}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        e.preventDefault();
+                                        e.target.blur();
+                                    }
+                                }}
                                 className="w-full pl-12 pr-4 py-3 rounded-full border border-slate-200 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent shadow-sm"
                             />
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
